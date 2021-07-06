@@ -2,7 +2,7 @@ import React from "react";
 import { Principal, Corpo } from "./style";
 import * as Icon from "react-icons/fa";
 import {Link } from 'react-router-dom';
-
+import Zoom from 'react-reveal/Zoom';
 const skills = [
   { nome: "Certificação", icon: <Icon.FaCertificate />, id: 1 },
   { nome: "Movimentação", icon: <Icon.FaDollarSign />, id: 2 },
@@ -15,9 +15,8 @@ const LandingBody = () => {
     <Principal>
       <aside className="img">
         <Link to="/">    <img src="../../../Logo.png" alt="" srcset="" /> </Link>
-      
       </aside>
-
+  <Zoom>
       <aside className="conteudo">
         <h1>SOFTLUCTION</h1>
         <h4>
@@ -33,15 +32,17 @@ const LandingBody = () => {
         <section className="skills">
           {skills.map((skill) => {
             return (
+              <Zoom>
               <div key={skill.id} className="icones">
                 <i> {skill.icon} </i>
-
+     
                 <h4> {skill.nome} </h4>
-              </div>
+              </div></Zoom>
             );
           })}
         </section>
       </aside>
+      </Zoom>
 
       <Corpo></Corpo>
     </Principal>

@@ -1,14 +1,32 @@
 import React from 'react'
-import Header from '../components/Header/Header';
-import LandingBody from '../components/LandingBody/LandingBody';
+import {Header ,Landing , Layout , About} from '../components/index';
+import  {useState } from 'react';
+const LandingView = ()  => {
+ 
 
-export default function Landing() {
+    const [colorChange, setColorchange] = useState('none');
+  
+    
+
+
+
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 80){
+       setColorchange('gray');
+  
+     }
+     else{
+       setColorchange('none');
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
     return (
-        <>
-         <Header login = {true} logo="none"/>
-         <LandingBody/>
-
-       
-        </>
+        <Layout pageTitle='Home'>
+         <Header color= {colorChange}  height={'70px'} login={true} />
+         <Landing/>
+         <About/>
+        </Layout>
     )
 }
+
+export default LandingView;

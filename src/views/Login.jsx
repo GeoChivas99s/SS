@@ -1,17 +1,13 @@
-import React from 'react';
-import Header from '../components/Header/Header';
-import FormLogin from '../components/FormLogin/FormLogin';
-
-
-
+import React from "react";
+import { Header, Form, Layout } from "../components/index";
 
 const Login = () => {
-    return (
-        <>
-   <Header />
-   <FormLogin/>
-   </>
-    );
-}
+  return (
+    <Layout pageTitle='Login'>
+      <Header />
+      <Form />
+    </Layout>
+  );
+};
 
 export default Login;

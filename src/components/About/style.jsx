@@ -44,7 +44,7 @@ const Description = styled.aside`
     background-color: white;
 
     &:hover {
-      padding: 2px;
+    transform: translate(10px);
     }
 
     i {
