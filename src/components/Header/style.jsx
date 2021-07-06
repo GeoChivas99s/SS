@@ -22,9 +22,11 @@ const AreaHeader = styled.header`
     left: 30px;
     width: 70px;
     position: absolute;
+ 
     img {
       width: 100%;
     }
+  
   }
   .menu {
     width: 50%;

@@ -17,7 +17,7 @@ const FormLogin = () => (
         <input type="password" required placeholder="Senha" />
         <button> Entrar </button>
         <section>
-          <Link>Registar</Link>
+          <Link to='/CriarConta'>Registar</Link>
           <Link>Recuperar Conta</Link>
         </section>
 

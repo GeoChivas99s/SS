@@ -6,8 +6,9 @@ import * as Icons from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const logo = props.logo; const mostra = props.login;
- /*
+  const logo = props.logo;
+  const mostra = props.login;
+  /*
 
   const color = props.color;
   const altura = props.altura;
@@ -20,7 +21,6 @@ const Header = (props) => {
   };
 
   return (
-
     <AreaHeader {...props}>
       <div>
         <div className="logo" style={{ display: logo }}>

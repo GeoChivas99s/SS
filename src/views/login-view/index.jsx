@@ -1,11 +1,11 @@
 import React from "react";
-import { Header, Form, Layout } from "../../components/index";
+import { Header, FormLogin, Layout } from "../../components/index";
 
 const Login = () => {
   return (
     <Layout pageTitle='Login'>
       <Header />
-      <Form />
+      <FormLogin />
     </Layout>
   );
 };
