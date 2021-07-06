@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Form, Layout } from "../components/index";
+import { Header, Form, Layout } from "../../components/index";
 
 const Login = () => {
   return (

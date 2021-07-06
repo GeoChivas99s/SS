@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header ,Landing , Layout , About} from '../components/index';
+import {Header ,Landing , Layout , About} from '../../components/index';
 import  {useState } from 'react';
 const LandingView = ()  => {
  
@@ -12,9 +12,9 @@ const LandingView = ()  => {
 
   const changeNavbarColor = () =>{
      if(window.scrollY >= 80){
-       setColorchange('gray');
-  
+       setColorchange('gray');  
      }
+
      else{
        setColorchange('none');
      }
