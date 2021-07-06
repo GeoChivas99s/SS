@@ -36,7 +36,7 @@ const Header = (props) => {
         <nav>
           <li>
             {" "}
-            <Link to="/AboutUs"> Quem Somos </Link>
+            <Link to="/"> Quem Somos </Link>
           </li>
           <li>Procedimentos</li>
           <li>Clientes</li>

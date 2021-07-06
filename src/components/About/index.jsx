@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styled from "./style.jsx";
 import data from '../../data/dataAbout';
-
+import {Slide , Roll } from 'react-reveal';
 
 const  About =() => {
   
@@ -9,6 +9,7 @@ const  About =() => {
     <>
       <Styled.Body>
         <Styled.Text>
+        <Slide left>
           <h1>QUEM SOMOS</h1>
           <h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
@@ -28,11 +29,12 @@ const  About =() => {
             doloribus? Expedita autem culpa enim quae blanditiis nostrum <br />
             nihil explicabo neque nesciunt. Sequi, ipsa.
           </h3>
+          </Slide>
         </Styled.Text>
 
         <Styled.Description>
           <div className="overlay"></div>
-
+          <Roll>
           {data.map((dat) => {
             return (
               <section key={dat.id}>
@@ -46,6 +48,7 @@ const  About =() => {
               </section>
             );
           })}
+          </Roll>
         </Styled.Description>
       </Styled.Body>
     </>

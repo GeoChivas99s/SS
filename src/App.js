@@ -1,8 +1,4 @@
-
-
-import Landing from './views/Landing';
-import Login from './views/Login';
-import AboutUs from './views/AboutUs';
+import {Landing , Login} from './views/index';
 import {BrowserRouter as Router , Route , Switch} from 'react-router-dom';
 
 function App() {
@@ -15,7 +11,6 @@ function App() {
       
       <Route path="/Login" component={Login}/>
       
-      <Route path="/AboutUS" component={AboutUs}/>
 
    </Switch>
 
