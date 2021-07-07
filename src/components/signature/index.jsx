@@ -103,7 +103,7 @@ window.addEventListener('scroll', changeNavbarColor);
   );
 };
 
-
+export default Signature; 
 
 
 
@@ -174,6 +174,3 @@ li{
 height:70px;
 
 `;
-
-
-export   {Signature , View , Navbar ,Overlay}; 
