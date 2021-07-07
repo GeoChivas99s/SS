@@ -1,4 +1,4 @@
-import {Landing , Login ,CreateAccount ,SignatureView ,DoneSignature, EndSignatureView } from './views/index';
+import {Landing , Login ,CreateAccount ,SignatureView ,DoneSignature, EndSignatureView ,MarketView } from './views/index';
 import {BrowserRouter as Router , Route , Switch} from 'react-router-dom';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <Route path ='/Assinatura' component={SignatureView}/>
       <Route path ='/CompletarAssinatura' component={DoneSignature}/>
       <Route path ='/TerminarAssinatura' component={EndSignatureView}/>
+      <Route path ='/Mercado' component={MarketView}/>
       
 
    </Switch>

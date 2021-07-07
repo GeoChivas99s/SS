@@ -4,3 +4,4 @@ export {default as CreateAccount} from './criar_conta-view/index';
 export {default as SignatureView} from './signature-view/index';
 export {default as DoneSignature} from './done-signature/index';
 export {default as EndSignatureView} from './end-signature-view/index';
+export {default as MarketView} from './market-view/index';

@@ -11,3 +11,4 @@ export { default as Landing } from './landing-body';
 export { default as FormCriarConta } from './form-criar_conta';
 export { default as ButtonGroup } from './button-group';
 export { default as Card } from './card';
+export { default as MarketHeader } from './market-header';
