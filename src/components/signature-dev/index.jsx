@@ -22,22 +22,22 @@ const SignatureDev = () => {
     </tr>
 
     <tr>
-        <td> Monetização </td>
+        <td className="ultima"> Monetização </td>
         <td> <h4> <Icon.FaCheck/></h4> </td>
         <td><h4> <Icon.FaCheck/></h4></td>
     </tr>
     <tr>
-        <td>Divulgação</td>
+        <td className="ultima">Divulgação</td>
         <td><h4> <Icon.FaCheck/></h4></td>
         <td><h4> <Icon.FaCheck/></h4></td>
     </tr>
     <tr>
-        <td>Sugestões de Apps</td>
+        <td className="ultima">Sugestões de Apps</td>
         <td> <p>  <Icon.FaWindowMinimize/></p>   </td>
         <td><h4> <Icon.FaCheck/></h4></td>
     </tr>
     <tr>
-        <td>Disponibilidade do Serviço</td>
+        <td className="ultima">Disponibilidade do Serviço</td>
         <td> <p>24/7 </p> </td>
         <td ><p>24/7 </p></td>
     </tr>
@@ -69,12 +69,18 @@ const Main = styled.section`
      margin-left:100px;
  }
  table{
+     .ultima{
+         text-align:start;
+         border-bottom: 4px solid #E6E6E6;
+     }
+    text-align:center;
      width:80%;
     padding:20px;
     flex:1;
     align-self:center;
 td{
-    border-bottom:0.5px solid;
+    border-bottom: 4px solid #E6E6E6;
+  
 }
 
 p{

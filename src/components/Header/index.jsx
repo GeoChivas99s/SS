@@ -40,7 +40,7 @@ const Header = (props) => {
       
             <Link to="/"> Quem Somos </Link>
           </li>
-          <li>Procedimentos</li>
+          <li>  <Link to="/Assinatura">Assinaturas</Link></li>
           <li>Clientes</li>
         </nav>
 

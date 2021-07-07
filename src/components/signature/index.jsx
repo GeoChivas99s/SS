@@ -43,7 +43,7 @@ window.addEventListener('scroll', changeNavbarColor);
       <>
   <Navbar  color={colorChange}>
       <div>
-        <div className="logo" style={{ display: logo }}>
+        <div className="logo" style={{ display: logo } }>
           <Link to="/">
             <img src="../../../LogoIvert1.png" alt="" />
           </Link>
@@ -111,11 +111,11 @@ height: 50vh;
 font-size:11px;
 
 .Text{
+  z-index:4;
   display:flex;
   flex-direction:column;
    align-items:center;
    justify-content:space-between;
-   z-index:4;
   
 
   .EuSou{
