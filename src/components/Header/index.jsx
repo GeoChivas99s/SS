@@ -1,19 +1,21 @@
 import { React, useState } from "react";
 
 import AreaHeader from "./style";
+
 import * as Icon from "react-icons/fa";
 import * as Icons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import {Link}  from 'react-router-dom';
+
 
 const Header = (props) => {
   const logo = props.logo;
   const mostra = props.login;
   /*
-
   const color = props.color;
   const altura = props.altura;
   backgroundColor: color, height: altura
   */
+
   const [mostraM, alterar] = useState(false);
 
   const mostraMenu = () => {
@@ -35,7 +37,7 @@ const Header = (props) => {
 
         <nav>
           <li>
-            {" "}
+      
             <Link to="/"> Quem Somos </Link>
           </li>
           <li>Procedimentos</li>
@@ -44,8 +46,7 @@ const Header = (props) => {
 
         {mostra === true ? (
           <Link to="/Login" className="Login">
-            {" "}
-            Fazer Login{" "}
+            Fazer Login
           </Link>
         ) : (
           <></>
