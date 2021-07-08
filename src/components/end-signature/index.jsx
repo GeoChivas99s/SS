@@ -31,7 +31,7 @@ export default function EndSignature() {
         </tr>
       </table>
 
-     <Button to="/">
+     <Button to="/Mercado">
          Assinar
      </Button>
     </Main>

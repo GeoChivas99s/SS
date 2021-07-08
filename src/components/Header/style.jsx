@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const AreaHeader = styled.header`
-  z-index: 4;
+  z-index: 10;
   width: 100%;
+  padding: 0 7%;
   color: white;
   height: 50px;
   display: flex;
@@ -19,7 +20,7 @@ const AreaHeader = styled.header`
   }
   .logo {
     top: 5px;
-    left: 30px;
+    left: 130px;
     width: 70px;
     position: absolute;
  
