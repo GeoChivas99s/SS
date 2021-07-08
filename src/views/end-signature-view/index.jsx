@@ -6,7 +6,7 @@ import {EndSignature ,Layout , SignatureHeader} from '../../components/index';
 export default function EndSignatureView() {
     return (
 
-        <Layout pageTitle='Terminar Assinatura'>
+        <Layout pageTitle='TerminarAssinatura'>
               <SignatureHeader />
             <EndSignature />
        
