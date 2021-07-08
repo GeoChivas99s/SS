@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AreaHeader from "../header/style";
+import AreaHeader from "../Header/style";
 import * as Icon from "react-icons/fa";
 import * as Icons from "react-icons/ai";
 import { Link } from "react-router-dom";
