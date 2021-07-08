@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styled from "./style.jsx";
+import * as Styled from "./style";
 import data from "../../data/dataAbout";
 import { Slide, Roll } from "react-reveal";
 
