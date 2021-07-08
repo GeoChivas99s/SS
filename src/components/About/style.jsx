@@ -24,6 +24,7 @@ const Text = styled.aside`
     margin-bottom: 10px;
   }
 `;
+
 const Description = styled.aside`
   background-image: linear-gradient(to bottom right, #682ee3, #ee0072, #eeba00);
   border: solid;
