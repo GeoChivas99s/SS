@@ -4,19 +4,16 @@ import AreaHeader from "./style";
 
 import * as Icon from "react-icons/fa";
 import * as Icons from "react-icons/ai";
-import {Link}  from 'react-router-dom';
-
+import { Link } from "react-router-dom";
+import useUserContext from "../../hooks/use-user-context";
 
 const Header = (props) => {
   const logo = props.logo;
   const mostra = props.login;
-  /*
-  const color = props.color;
-  const altura = props.altura;
-  backgroundColor: color, height: altura
-  */
 
   const [mostraM, alterar] = useState(false);
+
+  const { isLogged, data } = useUserContext;
 
   const mostraMenu = () => {
     alterar(!mostraM);
@@ -37,20 +34,23 @@ const Header = (props) => {
 
         <nav>
           <li>
-      
             <Link to="/"> Quem Somos </Link>
           </li>
-          <li>  <Link to="/Assinatura">Assinaturas</Link></li>
+          <li>
+            {" "}
+            <Link to="/Assinatura">Assinaturas</Link>
+          </li>
           <li>Clientes</li>
         </nav>
 
-        {mostra === true ? (
-          <Link to="/Login" className="Login">
-            Fazer Login
-          </Link>
-        ) : (
-          <></>
-        )}
+        {mostra === true &&
+          (!isLogged ? (
+            <Link to="/Login" className="Login">
+              Fazer Login
+            </Link>
+          ) : (
+            <p>{data?.name || 'User account'}</p>
+          ))}
       </div>
 
       <nav className={mostraM ? "menu active" : "menu"}>

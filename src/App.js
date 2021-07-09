@@ -1,5 +1,7 @@
 "useStrict";
 
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import {
   Landing,
   Login,
@@ -10,7 +12,6 @@ import {
   MarketView,
   UserHome
 } from "./views/index";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => (
   <Router>

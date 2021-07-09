@@ -6,10 +6,13 @@ import * as Icons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Principal, Corpo } from "../landing-body/style";
+import useUserContext from "../../hooks/use-user-context";
 
 const MarketHeader = (props) => {
   const [mostraM, alterar] = useState(false);
   const logo = props.logo;
+
+  const { isLogged, data } = useUserContext();
 
   const [colorChange, setColorchange] = useState("none");
   const [, setLogo] = useState("none");
@@ -50,10 +53,13 @@ const MarketHeader = (props) => {
           </nav>
           <div className="buttonSearch">
             <li>Pesquisar</li>
-
-            <Link to="/Login" className="button">
-              Aceder a conta
-            </Link>
+            {!isLogged ? (
+              <Link to="/Login" className="button">
+                Aceder a conta
+              </Link>
+            ) : (
+              <p>{data?.name}</p>
+            )}
           </div>
         </div>
 
