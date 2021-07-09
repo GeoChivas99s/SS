@@ -55,8 +55,7 @@ const Header = (props) => {
 
       <nav className={mostraM ? "menu active" : "menu"}>
         <i onClick={mostraMenu}>
-          {" "}
-          <Icons.AiOutlineClose />{" "}
+          <Icons.AiOutlineClose />
         </i>
         <li>
           <Link to="/AboutUs"> Quem Somos </Link>

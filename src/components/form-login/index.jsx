@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import * as Icon from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Reveal from "react-reveal";
 
 import { signIn } from "../../api";
@@ -8,24 +8,22 @@ import userContext from "../../context/user";
 import { Principal, Corpo, Form } from "./style";
 
 const FormLogin = () => {
+  const { push } = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSetEmail = (e) => setEmail(e.target.value);
   const handleSetPassword = (e) => setPassword(e.target.value);
 
-  const { setIsLogged, setUserData, data, isLogged } = useContext(userContext);
+  const { setIsLogged, setUserData } = useContext(userContext);
 
   const onLogin = (name, emailAddress) => {
-    console.log("IsLogged :::: ", isLogged);
-    console.log("Email :::: ", data?.email);
     setIsLogged(true);
-    console.log("IsLogged :::: ", isLogged);
     setUserData({
       name,
       email: emailAddress,
     });
-    console.log("Data :::: ", data);
+    push('/user');
   };
 
   const handleSubmit = () => signIn(email, password, onLogin);
