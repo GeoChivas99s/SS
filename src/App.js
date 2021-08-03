@@ -8,6 +8,7 @@ import {
   DoneSignature,
   EndSignatureView,
   MarketView,
+  UserView
 } from "./views/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/CompletarAssinatura" component={DoneSignature} />
       <Route path="/TerminarAssinatura" component={EndSignatureView} />
       <Route path="/Mercado" component={MarketView} />
+      <Route path="/UserView" component={UserView} />
     </Switch>
   </Router>
 );
