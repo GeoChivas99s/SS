@@ -31,7 +31,7 @@ const AreaHeader = styled.header`
   }
   .menu {
     width: 50%;
-    left: -120vh;
+    left: -120vw;
     height: 100vh;
     transition: 700ms;
     position: absolute;
@@ -65,7 +65,6 @@ const AreaHeader = styled.header`
       display: none;
       transition: 450ms;
     }
-
 
     width: 60%;
     display: flex;
