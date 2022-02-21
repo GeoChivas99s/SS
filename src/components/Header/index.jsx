@@ -13,10 +13,15 @@ const Header = (props) => {
 
   const [mostraM, alterar] = useState(false);
 
-  const { isLogged, data } = useUserContext;
+  const { isLogged, data, setIsLogged, setData } = useUserContext;
 
   const mostraMenu = () => {
     alterar(!mostraM);
+  };
+
+  const logout = () => {
+    setIsLogged(false);
+    setData({});
   };
 
   return (
@@ -49,7 +54,10 @@ const Header = (props) => {
               Fazer Login
             </Link>
           ) : (
-            <p>{data?.name || 'User account'}</p>
+            <>
+              <p>{data?.name || "User account"}</p>
+              <p onClick={logout}>Sair</p>
+            </>
           ))}
       </div>
 

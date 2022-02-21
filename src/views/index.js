@@ -1,14 +1,11 @@
-"useStrict"
+"useStrict";
 
-export {default as Landing} from './landing-view/index';
-export {default as Login} from './login-view/index';
-export {default as CreateAccount} from './criar_conta-view/index';
-export {default as SignatureView} from './signature-view/index';
-export {default as DoneSignature} from './done-signature/index';
-export {default as EndSignatureView} from './end-signature-view/index';
-export {default as MarketView} from './market-view/index';
-<<<<<<< HEAD
-export {default as UserView} from './user-view/index';
-=======
-export {default as UserHome} from './user_page/index';
->>>>>>> e33be4ee9f4d2651db10d9a5a06e4f91d0155d94
+export { default as Developer } from "./developer";
+export { default as Landing } from "./landing-page";
+export { default as Login } from "./login";
+export { default as CreateAccount } from "./sign-up";
+export { default as SignatureView } from "./signature";
+export { default as DoneSignature } from "./done-signature";
+export { default as EndSignatureView } from "./end-signature";
+export { default as MarketView } from "./market";
+export { default as UserView } from "./user_page";

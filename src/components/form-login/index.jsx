@@ -17,13 +17,14 @@ const FormLogin = () => {
 
   const { setIsLogged, setUserData } = useContext(userContext);
 
-  const onLogin = (name, emailAddress) => {
+  const onLogin = ({ name, emailAddress, type }) => {
     setIsLogged(true);
     setUserData({
       name,
+      type,
       email: emailAddress,
     });
-    push('/user');
+    push("/user");
   };
 
   const handleSubmit = () => signIn(email, password, onLogin);
@@ -40,24 +41,23 @@ const FormLogin = () => {
             type="Email"
             required
             placeholder="Email"
-            onClick={handleSetEmail}
+            onChange={handleSetEmail}
           />
           <input
             type="password"
             required
             placeholder="Senha"
-            onClick={handleSetPassword}
+            onChange={handleSetPassword}
           />
           <button type="button" onClick={handleSubmit}>
-            {" "}
-            Entrar{" "}
+            Entrar
           </button>
           <section>
             <Link to="/CriarConta">Registar</Link>
           </section>
 
           <p>
-            SuperSoft-Copyright <Icon.FaCopyright /> 2021{" "}
+            SuperSoft-Copyright <Icon.FaCopyright /> 2021
           </p>
         </Form>
         <Corpo></Corpo>

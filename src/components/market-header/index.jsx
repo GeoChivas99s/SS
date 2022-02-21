@@ -12,7 +12,7 @@ const MarketHeader = (props) => {
   const [mostraM, alterar] = useState(false);
   const logo = props.logo;
 
-  const { isLogged, data } = useUserContext();
+  const { isLogged, data, setIsLogged, setData } = useUserContext;
 
   const [colorChange, setColorchange] = useState("none");
   const [, setLogo] = useState("none");
@@ -29,6 +29,11 @@ const MarketHeader = (props) => {
   window.addEventListener("scroll", changeNavbarColor);
   const mostraMenu = () => {
     alterar(!mostraM);
+  };
+
+  const logout = () => {
+    setIsLogged(false);
+    setData({});
   };
 
   return (
@@ -58,7 +63,10 @@ const MarketHeader = (props) => {
                 Aceder a conta
               </Link>
             ) : (
-              <p>{data?.name}</p>
+              <>
+                <p>{data?.name || "User account"}</p>
+                <p onClick={logout}>Sair</p>
+              </>
             )}
           </div>
         </div>

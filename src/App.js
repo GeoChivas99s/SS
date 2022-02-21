@@ -10,12 +10,9 @@ import {
   DoneSignature,
   EndSignatureView,
   MarketView,
-<<<<<<< HEAD
-  UserView
-=======
-  UserHome
->>>>>>> e33be4ee9f4d2651db10d9a5a06e4f91d0155d94
-} from "./views/index";
+  UserView,
+  Developer
+} from "./views";
 
 const App = () => (
   <Router>
@@ -27,11 +24,8 @@ const App = () => (
       <Route path="/CompletarAssinatura" component={DoneSignature} />
       <Route path="/TerminarAssinatura" component={EndSignatureView} />
       <Route path="/Mercado" component={MarketView} />
-<<<<<<< HEAD
-      <Route path="/UserView" component={UserView} />
-=======
-      <Route path="/User" component={UserHome} />
->>>>>>> e33be4ee9f4d2651db10d9a5a06e4f91d0155d94
+      <Route path="/User" component={UserView} />
+      <Route path="/Developer" component={Developer} />
     </Switch>
   </Router>
 );

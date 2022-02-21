@@ -1,6 +1,7 @@
 export { default as About } from './About';
 export { default as Layout } from './layout';
 export { default as Header } from './Header';
+export { default as Hero } from './hero';
 export { default as Signature } from './signature';
 export { default as SignatureDev } from './signature-dev';
 export { default as SignatureEmp} from './signature-emp';
@@ -8,7 +9,7 @@ export { default as SignatureHeader} from './done-signature-header';
 export { default as EndSignature} from './end-signature';
 export { default as FormLogin } from './form-login';
 export { default as Landing } from './landing-body';
-export { default as FormCriarConta } from './form-criar_conta';
+export { default as FormCriarConta } from './form-sign-up';
 export { default as ButtonGroup } from './button-group';
 export { default as Card } from './card';
 export { default as MarketHeader } from './market-header';

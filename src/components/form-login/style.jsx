@@ -31,7 +31,7 @@ const Form = styled.form`
   flex-direction: column;
   padding-bottom: 0.5rem;
   justify-content: space-around;
-  input {
+  input, select {
     width: 100%;
     border: none;
     outline: none;

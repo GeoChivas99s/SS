@@ -6,31 +6,51 @@ import { ProductStatusListItem } from "./ProductStatusListItem/index";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
-import img from "../market-view/1.png";
-import img1 from "../market-view/2.png";
-import img2 from "../market-view/3.png";
-const data = [
-  { name: "Translang", description: "Leitor de caracteres", days: 240 , link:'https://translang.vercel.app' , img },
-  { name: "Mathous", description: "Resolvedor de cenas", days: 15 , link:'https://translang.vercel.app' ,img: img1 },
-  { name: "Even Be", description: "Gestão", days: 5  , link:'https://translang.vercel.app' , img: img2},
+import img from "../market/1.png";
+import img1 from "../market/2.png";
+import img2 from "../market/3.png";
+
+const apps = [
+  {
+    name: "Translang",
+    description: "Leitor de caracteres",
+    days: 240,
+    link: "https://translang.vercel.app",
+    img,
+  },
+  {
+    name: "Mathous",
+    description: "Resolvedor de cenas",
+    days: 15,
+    link: "https://translang.vercel.app",
+    img: img1,
+  },
+  {
+    name: "Even Be",
+    description: "Gestão",
+    days: 5,
+    link: "https://translang.vercel.app",
+    img: img2,
+  },
 ];
 
 const UserHome = () => {
-  const { isLogged } = useUserContext();
+  const { isLogged, data } = useUserContext();
 
-  return isLogged ? (
+  if (!isLogged) return <Redirect to="/Login" />;
+
+  if (data?.type && data.type === 1) return <Redirect to="/Developer" />;
+
+  return (
     <Layout title="User">
       <MarketHeader />
       <ViewLayout>
-        
-        {data.map((item, index) => (
+        {apps.map((item, index) => (
           <ProductStatusListItem {...item} key={index} />
         ))}
       </ViewLayout>
       <Button to="/Mercado"> Ver mais produtos</Button>
     </Layout>
-  ) : (
-    <Redirect to="/login" />
   );
 };
 
