@@ -17,13 +17,9 @@ const FormLogin = () => {
 
   const { setIsLogged, setUserData } = useContext(userContext);
 
-  const onLogin = ({ name, emailAddress, type }) => {
+  const onLogin = (data) => {
     setIsLogged(true);
-    setUserData({
-      name,
-      type,
-      email: emailAddress,
-    });
+    setUserData(data);
     push("/user");
   };
 

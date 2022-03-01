@@ -1,8 +1,9 @@
 import React from "react";
 import { Principal, Corpo } from "./style";
 import * as Icon from "react-icons/fa";
-import {Link } from 'react-router-dom';
-import Zoom from 'react-reveal/Zoom';
+import { Link } from "react-router-dom";
+import Zoom from "react-reveal/Zoom";
+
 const skills = [
   { nome: "Certificação", icon: <Icon.FaCertificate />, id: 1 },
   { nome: "Movimentação", icon: <Icon.FaDollarSign />, id: 2 },
@@ -10,13 +11,14 @@ const skills = [
   { nome: "Transações", icon: <Icon.FaExchangeAlt />, id: 4 },
 ];
 
-const LandingBody = () => {
-  return (
-    <Principal>
-      <aside className="img">
-        <Link to="/">    <img src="../../../Logo.png" alt="" srcset="" /> </Link>
-      </aside>
-  <Zoom>
+const LandingBody = () => (
+  <Principal>
+    <aside className="img">
+      <Link to="/">
+        <img src="../../../Logo.png" alt="" srcset="" />
+      </Link>
+    </aside>
+    <Zoom>
       <aside className="conteudo">
         <h1>SOFTLUCTION</h1>
         <h4>
@@ -30,23 +32,19 @@ const LandingBody = () => {
         </h4>
 
         <section className="skills">
-          {skills.map((skill) => {
-            return (
-              <Zoom>
-              <div key={skill.id} className="icones">
-                <i> {skill.icon} </i>
-     
-                <h4> {skill.nome} </h4>
-              </div></Zoom>
-            );
-          })}
+          {skills.map(({ id, icon, nome }) => (
+            <Zoom>
+              <div key={id} className="icones">
+                <i>{icon}</i>
+                <h4>{nome}</h4>
+              </div>
+            </Zoom>
+          ))}
         </section>
       </aside>
-      </Zoom>
-
-      <Corpo></Corpo>
-    </Principal>
-  );
-};
+    </Zoom>
+    <Corpo />
+  </Principal>
+);
 
 export default LandingBody;

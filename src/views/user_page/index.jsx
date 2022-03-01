@@ -37,9 +37,9 @@ const apps = [
 const UserHome = () => {
   const { isLogged, data } = useUserContext();
 
-  if (!isLogged) return <Redirect to="/Login" />;
+  if (!isLogged) return <Redirect to="/login" />;
 
-  if (data?.type && data.type === 1) return <Redirect to="/Developer" />;
+  if (data?.type && data.type === "1") return <Redirect to="/Developer" />;
 
   return (
     <Layout title="User">

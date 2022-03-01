@@ -1,6 +1,6 @@
-export { default as About } from './About';
+export { default as About } from './about';
 export { default as Layout } from './layout';
-export { default as Header } from './Header';
+export { default as Header } from './header';
 export { default as Hero } from './hero';
 export { default as Signature } from './signature';
 export { default as SignatureDev } from './signature-dev';
@@ -14,3 +14,4 @@ export { default as ButtonGroup } from './button-group';
 export { default as Card } from './card';
 export { default as MarketHeader } from './market-header';
 export { default as UserHeader } from './user-header';
+export { default as ProjectsSection } from './projects-section';

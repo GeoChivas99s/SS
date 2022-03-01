@@ -71,3 +71,46 @@ export const getUserByEmail = (email, onSuccess) => {
     })
     .catch(() => console.log("Error on get user from firestore"));
 };
+
+export const addProject = (name, devEmail, imageLink, link, onSuccess) =>
+  firebase
+    .firestore()
+    .collection("project")
+    .add({ name, devEmail, imageLink, link, state: 2 })
+    .then(onSuccess)
+    .catch((e) => {
+      alert("set data error");
+      console.log("error :::: ", e);
+    });
+
+export const getProjects = () =>
+  firebase
+    .firestore()
+    .collection("project")
+    .where("state", "==", 1)
+    .get()
+    .then((snapshot) => {
+      let data = [];
+      snapshot.forEach((docs) => data.push(docs.data()));
+      return data;
+    })
+    .catch((e) => {
+      alert("get projects error");
+      console.log("error :::: ", e);
+    });
+
+export const getProjectsByDevEmail = (email) =>
+  firebase
+    .firestore()
+    .collection("project")
+    .where("devEmail", "==", email)
+    .get()
+    .then((snapshot) => {
+      let data = [];
+      snapshot.forEach((docs) => data.push(docs.data()));
+      return data;
+    })
+    .catch((e) => {
+      alert("get project by email error");
+      console.log("error :::: ", e);
+    });

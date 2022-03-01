@@ -13,15 +13,13 @@ const Header = (props) => {
 
   const [mostraM, alterar] = useState(false);
 
-  const { isLogged, data, setIsLogged, setData } = useUserContext;
+  const { isLogged, data, setIsLogged, setUserData } = useUserContext();
 
-  const mostraMenu = () => {
-    alterar(!mostraM);
-  };
+  const mostraMenu = () => alterar(!mostraM);
 
   const logout = () => {
     setIsLogged(false);
-    setData({});
+    setUserData(null);
   };
 
   return (
@@ -39,7 +37,7 @@ const Header = (props) => {
 
         <nav>
           <li>
-            <Link to="/"> Quem Somos </Link>
+            <Link to="/">Quem Somos</Link>
           </li>
           <li>
             {" "}
@@ -50,7 +48,7 @@ const Header = (props) => {
 
         {mostra === true &&
           (!isLogged ? (
-            <Link to="/Login" className="Login">
+            <Link to="/login" className="Login">
               Fazer Login
             </Link>
           ) : (

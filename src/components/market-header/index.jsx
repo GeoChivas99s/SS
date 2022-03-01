@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AreaHeader from "../Header/style";
+import AreaHeader from "../header/style";
 import * as Icon from "react-icons/fa";
 import * as Icons from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ const MarketHeader = (props) => {
   const [mostraM, alterar] = useState(false);
   const logo = props.logo;
 
-  const { isLogged, data, setIsLogged, setData } = useUserContext;
+  const { isLogged, data, setIsLogged, setUserData } = useUserContext();
 
   const [colorChange, setColorchange] = useState("none");
   const [, setLogo] = useState("none");
@@ -26,6 +26,7 @@ const MarketHeader = (props) => {
       setLogo("none");
     }
   };
+
   window.addEventListener("scroll", changeNavbarColor);
   const mostraMenu = () => {
     alterar(!mostraM);
@@ -33,7 +34,7 @@ const MarketHeader = (props) => {
 
   const logout = () => {
     setIsLogged(false);
-    setData({});
+    setUserData(null);
   };
 
   return (
@@ -45,11 +46,9 @@ const MarketHeader = (props) => {
               <img src="../../../LogoIvert1.png" alt="" />
             </Link>
           </div>
-
           <i onClick={mostraMenu}>
             <Icon.FaBars />
           </i>
-
           <nav className="Category">
             <li>
               <Link to="/"> Categorias </Link>
@@ -59,7 +58,7 @@ const MarketHeader = (props) => {
           <div className="buttonSearch">
             <li>Pesquisar</li>
             {!isLogged ? (
-              <Link to="/Login" className="button">
+              <Link to="/login" className="button">
                 Aceder a conta
               </Link>
             ) : (

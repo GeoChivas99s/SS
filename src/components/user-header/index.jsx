@@ -3,6 +3,7 @@ import * as Icons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
+import useUserContext from "../../hooks/use-user-context";
 import { Navbar, View, Overlay } from "./user-header.styles";
 
 const UserHeader = (props) => {
@@ -10,20 +11,20 @@ const UserHeader = (props) => {
   const logo = props.logo;
 
   const [colorChange, setColorchange] = useState("none");
-  const [, setLogo] = useState("none");
 
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange("gray");
-      setLogo("flex");
-    } else {
-      setColorchange("none");
-      setLogo("none");
-    }
-  };
+  const { isLogged, data, setIsLogged, setUserData } = useUserContext();
+
+  const changeNavbarColor = () =>
+    setColorchange(window.scrollY >= 80 ? "gray" : "none");
+
   window.addEventListener("scroll", changeNavbarColor);
   const mostraMenu = () => {
     alterar(!mostraM);
+  };
+
+  const logout = () => {
+    setIsLogged(false);
+    setUserData(null);
   };
 
   return (
@@ -49,9 +50,16 @@ const UserHeader = (props) => {
           <div className="buttonSearch">
             <li>Pesquisar</li>
 
-            <Link to="/Login" className="button">
-              Aceder a conta
-            </Link>
+            {!isLogged ? (
+              <Link to="/login" className="Login">
+                Fazer Login
+              </Link>
+            ) : (
+              <>
+                <p>{data?.name || "User account"}</p>
+                <p onClick={logout}>Sair</p>
+              </>
+            )}
           </div>
         </div>
 

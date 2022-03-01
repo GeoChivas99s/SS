@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import AreaHeader from "../Header/style";
+import AreaHeader from "../header/style";
 
 import { Principal, Corpo } from "../landing-body/style";
 

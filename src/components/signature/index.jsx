@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AreaHeader from "../Header/style";
+import AreaHeader from "../header/style";
 import * as Icon from "react-icons/fa";
 import * as Icons from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -51,7 +51,7 @@ const Signature = (props) => {
           <div className="buttonSearch">
             <li>Pesquisar</li>
 
-            <Link to="/Login" className="button">
+            <Link to="/login" className="button">
               Aceder a conta
             </Link>
           </div>

@@ -74,7 +74,7 @@ const FormCriarConta = () => {
           </button>
 
           <section>
-            <Link to="/Login">Entrar</Link>
+            <Link to="/login">Entrar</Link>
           </section>
 
           <p>
